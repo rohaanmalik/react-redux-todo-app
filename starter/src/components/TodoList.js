@@ -3,12 +3,10 @@ import TodoItem from './TodoItem';
 import { useSelector } from "react-redux";
 
 const TodoList = () => {
-	// const todo = useSelector((state) => state.todos)
-	const todos = [
-		{ id: 1, title: 'todo1', completed: false },
-		{ id: 2, title: 'todo2', completed: false },
-		{ id: 3, title: 'todo3', completed: true },
-	];
+
+	// view from the redux store & the name "todos" is from the store 
+	// state is passed by redux
+	const todos = useSelector((state) => state.todos)
 
 	return (
 		<ul className='list-group'>
